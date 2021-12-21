@@ -1,0 +1,90 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" controller="NewTrialSignupController">
+
+<html lang="en">
+<center><apex:image id="theImage" value="{!$Resource.Q2Logo}" width="255" height="130"/></center>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Your description here"/>
+    <meta name="author" content="Your Name"/>
+    <title>Q2 Lending Product Trial Org Creation</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+    <!-- -->
+
+</head>
+<body>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading text-center"><div style="font-family:Avenir LT Std"><div style="color:black;font-size: 18px;" ><B>Sign up for your preconfigured Q2 Lending Trial Org, for 30 days.</B></div></div></div>
+            <div class="panel-body">
+            <apex:form ><div style="font-family:Avenir LT Std">
+                    <div class="row">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">First Name</label>
+                        <div class="col-md-4">
+                            <apex:inputField value="{!newLead.FirstName}" required="true"/>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Last Name</label>
+                        <div class="col-md-4">
+                            <apex:inputField value="{!newLead.LastName}"  required="true"/>
+                            <!--<input type="text" value="{!newLead.LastName}" class="form-control" id="lastName" name="lastName" placeholder="Enter Last Name"  required="true"/>-->
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Email</label>
+                        <div class="col-md-4">
+                            <apex:inputField value="{!newLead.Email}"  required="true"/>
+                            <!--<input type="text" value="{!newLead.LastName}" class="form-control" id="lastName" name="lastName" placeholder="Enter Last Name"  required="true"/>-->
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Company</label>
+                        <div class="col-md-4">
+                            <apex:inputField value="{!newLead.Company}"  required="true"/>
+                            <!--<input type="text" value="{!newLead.LastName}" class="form-control" id="lastName" name="lastName" placeholder="Enter Last Name"  required="true"/>-->
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Country</label>
+                        <apex:selectList value="{!newLead.Country}" size="1" required="true">
+                            <apex:selectoptions value="{!countryCodes}"></apex:selectoptions>
+                        </apex:selectList>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="form-group ">
+                        <div class="col-md-12" style="text-align: center;"><B>
+                        <apex:commandButton action="{!createTrialOrg}" value="Submit" id="theButton"/></B>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="form-group">
+                    </div>
+                    </div>
+            </div>
+            </apex:form>
+            </div>
+        </div>
+    </div>
+    <div class="panel-heading text-center"> <div style="font-family:Avenir LT Std"><div style="color:black;font-size: 15px;" >Use your Trail Org to take a test drive &amp; get to know the Q2 Lending Apps, Apps that will be installed on your Org are Q2 Originate, Q2 Loan and Q2 Collections (Version: 3.5). Please note that Integrations isn’t configured as it requires real time data.
+</div></div></div>
+<div class="panel-heading text-center"> <div style="font-family:Avenir LT Std"><div style="color:black;font-size: 15px;" ><B>If you are unable to create the Trial Org, please reach out to <B>Arvind Ram Kumar</B> at arvindram.kumar4@q2.com.</B></div></div></div>
+</body>
+</html>
+</apex:page>

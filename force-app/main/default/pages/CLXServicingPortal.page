@@ -1,0 +1,16 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" controller="clcommon.PortalActions">
+    <apex:include pageName="clcommon__ResolveNamespace"/>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <apex:stylesheet value="{!URLFOR($Resource.CLXServicingPortal)}" />   
+             <!--         <apex:stylesheet value="https://localhost:3000/assets/css/style.min.css" /> -->
+
+            <title>CLX Servicing portal</title>
+        </head>
+        <body>
+            <clcommon:IncludePortal2 navName="CLXServicingPortal" theme="mui" showDefaultLoadingPage="false">
+            </clcommon:IncludePortal2>
+        </body>      
+      </html>
+</apex:page>
